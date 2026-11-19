@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Predictor - Result</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            background: #092756;
+            color: white;
+            text-align: center;
+            letter-spacing: 1.2px;
+        }
+
+        .results {
+            margin-top: 100px;
+        }
+
+        .results h1 {
+            font-size: 28px;
+        }
+
+        .danger {
+            color: #ff4d4d;
+        }
+
+        .safe {
+            color: #4dff88;
+        }
+
+        .gif,
+        .gif1 {
+            width: 250px;
+            max-width: 80%;
+            margin-top: 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background: #4a77d4;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .back-button:hover {
+            background: #365fac;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="results">
+
+        {% if prediction == 1 %}
+
+            <h1>
+                Prediction:
+                <span class="danger">
+                    Oops! You have DIABETES.
+                </span>
+            </h1>
+
+            
+
+        {% elif prediction == 0 %}
+
+            <h1>
+                Prediction:
+                <span class="safe">
+                    Relax!! You DON'T have diabetes.
+                </span>
+            </h1>
+
+            
+        {% endif %}
+
+        <br>
+
+        <a href="/" class="back-button">
+            Check Again
+        </a>
+
+    </div>
+
+</body>
+
+</html>

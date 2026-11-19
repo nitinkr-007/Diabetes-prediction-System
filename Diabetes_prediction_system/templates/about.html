@@ -1,0 +1,215 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us - HealthNexus AI</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+
+            background: linear-gradient(135deg, #092756, #1b4f72);
+
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 30px 15px;
+        }
+
+        .about-container {
+            width: 100%;
+            max-width: 650px;
+
+            padding: 40px;
+
+            background: rgba(0, 0, 0, 0.25);
+
+            border-radius: 15px;
+
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+
+            backdrop-filter: blur(8px);
+
+            text-align: center;
+        }
+
+        .logo {
+            width: 65px;
+            height: 65px;
+
+            object-fit: contain;
+
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            color: #5dade2;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .description {
+            line-height: 1.7;
+            font-size: 15px;
+
+            color: rgba(255, 255, 255, 0.88);
+
+            margin-bottom: 30px;
+        }
+
+        .developers-title {
+            font-size: 21px;
+            margin-bottom: 15px;
+        }
+
+        .developers {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .developer {
+            background: rgba(255, 255, 255, 0.12);
+
+            padding: 10px 18px;
+
+            border-radius: 20px;
+
+            font-size: 14px;
+
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .back-button {
+            display: inline-block;
+
+            margin-top: 30px;
+
+            padding: 12px 25px;
+
+            background: #4a77d4;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 7px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            background: #365fac;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            margin-top: 25px;
+
+            font-size: 12px;
+
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        @media (max-width: 600px) {
+            .about-container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+
+            .tagline {
+                font-size: 16px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="about-container">
+
+        <img
+            src="{{ url_for('static', filename='healthnexus-logo.png') }}"
+            alt="HealthNexus AI Logo"
+            class="logo"
+        >
+
+        <h1>HealthNexus AI</h1>
+
+        <div class="tagline">
+            AI-Powered Health Prediction
+        </div>
+
+        <p class="description">
+            HealthNexus AI is a machine learning based healthcare
+            web application designed to provide an initial prediction
+            of diabetes risk based on user-provided health parameters.
+            The system uses a trained Random Forest classification
+            model to analyze the input data and generate a prediction.
+        </p>
+
+        <h2 class="developers-title">
+            Developed By
+        </h2>
+
+        <div class="developers">
+
+            <div class="developer">
+                Nitin Kumar
+            </div>
+
+            <div class="developer">
+                Harsh Rana
+            </div>
+
+            <div class="developer">
+                Naman Jindal
+            </div>
+
+            <div class="developer">
+                Mahak Rana
+            </div>
+
+        </div>
+
+        <a href="/" class="back-button">
+            Back to Home
+        </a>
+
+        <p class="footer">
+            HealthNexus AI is intended for educational purposes
+            and does not replace professional medical advice.
+        </p>
+
+    </div>
+
+</body>
+
+</html>
+```
